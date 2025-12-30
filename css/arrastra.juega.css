@@ -1,0 +1,233 @@
+* {
+  cursor: none;
+  user-select: none;
+}
+
+#cursor-img {
+  position: fixed;
+  z-index: 1000;
+  pointer-events: none;
+  transform: translate(-50%, -50%) rotate(210deg);
+  height: 30%;
+}
+
+.alarma {
+  pointer-events: none;
+    position: fixed; 
+    top: 50%;
+    height:75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "DynaPuff", system-ui;
+    margin: 0 auto;
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 2px dashed black;
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(153, 207, 207, 1) 50%, rgb(128, 169, 192) 100%);
+    backdrop-filter: blur(30px);
+    z-index: 999;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+    font-size: 5rem; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transition: all 2s ease;
+  box-shadow: 0 0 15px black;
+}
+
+#cerrarAlerta {
+  pointer-events: auto;
+   background-color: #110d44;
+  font-size: 30px;
+  color: white;
+  padding: 10px 20px;
+  font-family: "DynaPuff", system-ui;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  border:none;
+}
+
+#cerrarAlerta:hover{
+  transform: scale(1.2);
+  cursor: url('../imagenes/hand.cur'), pointer;
+  background-color: #080624;
+}
+
+
+#correcto {
+    width: 100px;
+    max-width: 30%;
+    height: auto;
+    margin-bottom: 20px;
+    position: static; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+  overflow: hidden;
+  background-size: 100%;
+  background-image: url('../imagenes/preguntas.png');
+}
+
+header {
+  position: relative;
+  left:50%;
+  z-index:4;
+  transform: translateX(-40%)
+}
+
+h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-70px);
+  z-index: 3;
+  background: linear-gradient(180deg, rgba(62,171,214,1) 2%, rgba(142,232,226,1) 57%, rgba(122,250,210,1) 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-family: "DynaPuff", system-ui;
+  font-size: 80px;
+}
+
+.title_back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-20px) translateX(18px);
+  z-index: -1;
+  text-shadow: 0 0 25px black;
+  font-weight: bold;
+  font-family: "DynaPuff", system-ui;
+  font-size: 80px;
+  color: black;
+  white-space: nowrap;
+}
+
+#cajaimagenes,
+#respuestas {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  height: 150px;
+  font-family: "DynaPuff", system-ui;
+  background: linear-gradient(135deg, #d0f4f1 0%, #e8fefe 100%);
+  border: 6px solid #197b77;
+  border-radius: 9px;
+  box-shadow: 0 0 10px black;
+  padding: 20px 60px 20px 60px;
+  transform: translateY(100px);
+}
+
+#cajaimagenes img,
+#main img {
+  float: left;
+  width: 22%;
+  margin: 5px;
+  margin-top: 10px;
+  height: auto;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+#main img:hover {
+  transform: scale(1.2);
+}
+
+#respuestas {
+  margin-top: 10px;
+}
+
+
+
+#correcto {
+  color: white;
+  font-size: 30px;
+}
+
+#volver {
+  font-family: "DynaPuff", system-ui;
+  background-color: rgb(10, 32, 27);
+  color: white;
+  border-radius: 10px;
+  font-size: 30px;
+  transition: all 0.3s ease;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+}
+
+#volver:hover {
+  background-color: rgb(10, 58, 47);
+  color: rgb(170, 170, 170);
+}
+
+#nivel {
+  font-family: "DynaPuff", system-ui;
+  position: fixed;
+  font-weight: bold;
+  left: 50%;
+  top: 16%;
+  font-size: 40px;
+  transform: translateY(60px) translateX(70px);
+    background: linear-gradient(120deg, #000000, #0e0e0ea8);
+   font-size: 50px;
+  background-clip: text;             
+  -webkit-background-clip: text;     
+  -webkit-text-fill-color: transparent;
+}
+
+#ayudante {
+  animation: 3s flotar ease infinite;
+  position: absolute;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+@keyframes flotar {
+  0% {
+    transform: translateX(-200px) translateY(0) rotate(0deg) scale(0.6);
+  }
+  25% {
+    transform: translateX(-200px) translateY(-6px) rotate(-0.4deg) scale(0.6);
+  }
+  50% {
+    transform: translateX(-200px) translateY(2px) rotate(0.4deg) scale(0.6);
+  }
+  75% {
+    transform: translateX(-200px) translateY(-4px) rotate(-0.2deg) scale(0.6);
+  }
+  100% {
+    transform: translateX(-200px) translateY(0) rotate(0deg) scale(0.6);
+  }
+}
+
+#negro {
+  position: absolute;
+  z-index: 77;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  transform: translateY(-40px) translateX(-7px);
+  animation: fade_out 1s linear forwards;
+}
+
+@keyframes fade_out {
+  from {
+    opacity: 1;
+    filter: blur(10px);
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+
+
+
+
+

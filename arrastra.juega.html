@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kimyks | Nivel 4</title>
+    <link rel="shortcut icon" href="imagenes/No_fondo-_2_.ico">
+    <link rel="stylesheet" href="css/arrastra.juega.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="negro"></div>
+    <img id="cursor-img" src="imagenes/mano_ayudante.png" alt="cursor">
+
+    <header>
+        <h1>ARRASTRA Y PEGA</h1>
+        <div class="title_back">ARRASTRA Y PEGA</div>
+        <div id="nivel">nivel 4</div>
+    </header>
+     <div id="ayudante">
+            <img onclick="precionado()" src="imagenes/gato_ayudante.png" alt="ayudante">
+        </div>
+
+    <main id="main">
+        <section id="cajaimagenes">
+            <img src="imagenes/oro.png" id="img-oro" alt="Oro">
+            <img src="imagenes/cobre.png" id="img-cobre" alt="Cobre">
+            <img src="imagenes/hierro.png" id="img-hierro" alt="Hierro">
+            <img src="imagenes/Agua.png" id="img-agua" alt="Agua">
+        </section>
+
+        <section id="respuestas">
+            <div class="zonadestino" id="zona-1"><img src="imagenes/Agua (1).png" alt="Agua"></div>
+            <div class="zonadestino" id="zona-2"><img src="imagenes/Fe.png" alt="Fe"></div>
+            <div class="zonadestino" id="zona-3"><img src="imagenes/Cu.png" alt="Cu"></div>
+            <div class="zonadestino" id="zona-4"><img src="imagenes/Au.png" alt="Au"></div>
+        </section>
+    </main>
+
+    <div id="alerta" class="alarma">
+        <img id="correcto" src="imagenes/No_fondo (2).png" alt="Logo">
+        <div id="context">conclusion</div>
+        <button id="cerrarAlerta" type="button">cerrar</button>
+    </div>
+   
+
+    <script src="js/arrastra_pega.js"></script>
+  
+</body>
+</html>

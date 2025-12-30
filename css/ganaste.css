@@ -1,0 +1,186 @@
+*{
+  cursor: url('../imagenes/arrow.cur'), default;
+  user-select: none;
+}
+
+body {
+  background-image: url('../imagenes/preguntas.png');
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+#content{
+  animation: in 0.8s ease-in-out forwards;
+}
+
+#trofeo{
+  height:600px;
+  transform: translateX(600px)  rotateX(5deg) rotateY(30deg) perspective(1000px);
+  animation: roti 1s linear infinite;
+}
+
+@keyframes roti {
+  0%{
+    transform: translateX(600px)  rotateX(5deg) rotateY(30deg) perspective(1000px);
+  }
+  50%{
+    transform: translateX(600px)  rotateX(5deg) rotateY(0deg) perspective(1000px);
+  }
+  100%{
+    transform: translateX(600px)  rotateX(5deg) rotateY(30deg) perspective(1000px);
+
+  }
+  
+}
+
+
+#ayudante {
+  position: absolute;
+  z-index: 45;
+  bottom: 10vh;
+  left: 71%;
+
+  height: 45%;
+  animation: si 3s ease infinite;
+}
+
+#mano {
+  position: absolute;
+  z-index: 46;
+  bottom: 20vh;
+  right: 15vw;
+  height: 30%;
+  opacity: 0.8;
+  animation: si 5s ease infinite;
+  pointer-events: none;
+}
+
+@keyframes si {
+  0% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-6px) rotate(-0.4deg); }
+  50% { transform: translateY(2px) rotate(0.4deg); }
+  75% { transform: translateY(-4px) rotate(-0.2deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+#felicidades{
+  font-family: "DynaPuff", system-ui;
+  position: fixed;
+  font-weight: bold;
+  left: 30%;
+  top: 40%;
+  text-align: justify;
+  font-size: 30px;
+  transform: translateY(20px) translateX(-400px);
+  background: linear-gradient(120deg, #4e4e4e 50%, #0e0e0ea8 100%);
+  background-clip: text;             
+  -webkit-background-clip: text;     
+  -webkit-text-fill-color: transparent;
+}
+
+
+@keyframes in {
+  from{
+    transform:translateX(-200px);
+  }
+  to{
+    transform:translateX(0px);
+  }
+  
+}
+
+header {
+  position: absolute;
+  top:10%;
+  left:5%;
+  z-index:100;
+}
+
+
+#titulito {
+  font-family: "DynaPuff", system-ui;
+  font-size: 100px;
+  margin: 0;
+}
+
+.title_back {
+  position: absolute;
+  top: 0;
+  left: 0;
+   background: linear-gradient(180deg,
+    rgba(62,171,214,1) 2%,
+    rgba(142,232,226,1) 57%,
+    rgba(122,250,210,1) 100%);
+  transform: translateY(6px) translateX(8px);
+    -webkit-background-clip: text;      
+  -webkit-text-fill-color: transparent; 
+  background-clip: text;              
+  color: transparent;                 
+  display: inline-block;             
+  text-shadow: none !important;   
+  z-index: 98;
+  font-weight: bold;
+  font-family: "DynaPuff", system-ui;
+  font-size: 100px;
+  color: black;
+  white-space: nowrap;
+}
+
+#nivel {
+  font-family: "DynaPuff", system-ui;
+  position: fixed;
+  font-weight: bold;
+  left: 60%;
+  top: 25%;
+  font-size: 30px;
+  transform: translateY(20px) translateX(-400px);
+    background: linear-gradient(120deg, #000000, #0e0e0ea8);
+  background-clip: text;             
+  -webkit-background-clip: text;     
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+.lluvia {
+  position: absolute;
+  top: -50px;
+  font-size: 2rem;
+  user-select: none;
+  pointer-events: none;
+  animation: caer linear forwards;
+}
+
+@keyframes caer {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0.3;
+  }
+}
+
+#creadoreess{
+   background: linear-gradient(90deg, #206b7ea9 0%, transparent 100%);
+   height: 100vh;
+   width: 50%;
+   border-radius: 10px;
+}
+
+#negro {
+  animation:none;
+  position: absolute;
+  z-index: 333;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  animation: fade_out 1s linear forwards;
+}
+
+@keyframes fade_out {
+  from { opacity: 1; }
+  to { opacity: 0; display: none; }
+}

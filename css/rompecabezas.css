@@ -1,0 +1,296 @@
+* {
+  cursor: url('../imagenes/arrow.cur'), default;
+  user-select: none;
+}
+
+html,
+body {
+    background-image: url('../imagenes/preguntas.png');
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+
+}
+
+
+
+
+
+#principal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  flex-grow: 1;
+}
+
+p {
+  color: #1e5c54d3;
+  text-shadow: 0 0 15px #61d1c2d3;
+  font-weight: bolder;
+  text-align: center;
+  font-family: "DynaPuff", system-ui;
+  font-size: 30px;
+}
+
+#alerta {
+  opacity: 0;
+  position: absolute;
+  z-index: 500;
+  bottom: 1%;
+  right: 33%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(153, 207, 207, 1) 50%, rgb(128, 169, 192) 100%);
+  border-radius: 20px;
+  padding: 10px 50px;
+  border: 5px dashed #203d39d3;
+  transition: all 2s ease;
+  pointer-events: none;
+
+
+}
+
+#volver {
+  background-color: rgba(39, 104, 104, 0.644);
+  box-shadow: 0 0 15px rgb(13, 41, 41);
+  color: white;
+  font-family: "DynaPuff", system-ui;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  pointer-events: all;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 150px;
+  
+
+}
+
+
+
+#volver:hover {
+  background-color: rgba(39, 90, 90, 0.644);
+  box-shadow: 0 0 15px rgb(13, 41, 41);
+  cursor: url('../imagenes/hand.cur'), pointer;
+}
+
+#reference {
+  height: 20%;
+  width: 350px;
+  border-radius: 10px;
+  border: 12px dashed #203d395d;
+}
+
+#ayudante {
+  position: absolute;
+  z-index: 45;
+  bottom: 30%;
+  right: 0%;
+  height: 30%;
+  animation: si 3s ease infinite;
+  cursor: url('../imagenes/hand.cur'), pointer;
+}
+
+#mano {
+  pointer-events: none;
+  position: absolute;
+  z-index: 46;
+  bottom: 66%;
+  right: 60%;
+  height: 30%;
+  animation: si 5s ease infinite;
+  pointer-events: none;
+
+}
+
+@keyframes si {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-6px) rotate(-0.4deg);
+  }
+
+  50% {
+    transform: translateY(2px) rotate(0.4deg);
+  }
+
+  75% {
+    transform: translateY(-4px) rotate(-0.2deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+#negro {
+  position: absolute;
+  z-index: 333;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  transform: translateY(-20px) translateX(-7px);
+  animation: fade_out 1s linear forwards;
+}
+
+@keyframes fade_out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    display: none;
+  }
+
+}
+
+header {
+  position: absolute;
+  left: 50%;
+  z-index: 100;
+  transform: translateX(-50%);
+}
+
+#nivel {
+  font-family: "DynaPuff", system-ui;
+  position: fixed;
+  font-weight: bold;
+  left: 60%;
+  top: 25%;
+  font-size: 30px;
+  transform: translateY(20px) translateX(220px);
+  background: linear-gradient(120deg, #000000, #0e0e0ea8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#titulito {
+  font-family: "DynaPuff", system-ui;
+  font-size: 60px;
+  margin: 0;
+}
+
+.title_back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg,
+      rgba(62, 171, 214, 1) 2%,
+      rgba(142, 232, 226, 1) 57%,
+      rgba(122, 250, 210, 1) 100%);
+  transform: translateY(6px) translateX(8px);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  text-shadow: none !important;
+  z-index: 98;
+  font-weight: bold;
+  font-family: "DynaPuff", system-ui;
+  font-size: 60px;
+  color: black;
+  white-space: nowrap;
+}
+
+.pieza {
+  height: 170px;
+  width: 90x;
+  transition: all 0.3s ease;
+  animation: .6s aparecer ease forwards;
+}
+
+@keyframes aparecer {
+  from {
+    width: 150px;
+  }
+
+  to {
+    width: 200px;
+  }
+
+}
+
+#cuadro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  transform: scale(0.7);
+}
+
+
+#fichas {
+  transform: translateY(40px);
+  background: linear-gradient(180deg, #a5e9e1 0%, #dffcf9 100%);
+  padding: 20px;
+  box-shadow: 0 0 25px black;
+  width: auto;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  animation: spawn 4s ease forwards;
+}
+
+@keyframes spawn {
+  0% {
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+
+  50% {
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+
+  100% {
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+
+  }
+
+}
+
+#ficha0:active {
+  box-shadow: 0 0 20px white;
+  transform: scale(1.1);
+  cursor: url('../imagenes/hand.cur'), pointer;
+}
+
+#ficha1:active {
+  box-shadow: 0 0 20px white;
+  transform: scale(1.1);
+  cursor: url('../imagenes/hand.cur'), pointer;
+}
+
+#ficha2:active {
+  box-shadow: 0 0 20px white;
+  transform: scale(1.1);
+  cursor: url('../imagenes/hand.cur'), pointer;
+}
+
+#ficha3:active {
+  box-shadow: 0 0 20px white;
+  transform: scale(1.1);
+  cursor: url('../imagenes/hand.cur'), pointer;
+}
+
+#ficha4:active {
+  box-shadow: 0 0 20px white;
+  transform: scale(1.1);
+  cursor: url('../imagenes/hand.cur'), pointer;
+}
+
+#ficha5:active {
+  box-shadow: 0 0 20px white;
+  transform: scale(1.1);
+  cursor: url('../imagenes/hand.cur'), pointer;
+}

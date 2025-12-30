@@ -1,0 +1,207 @@
+* {
+    cursor: url('../imagenes/arrow.cur'), default;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%; 
+    background-image: url('../imagenes/preguntas.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: auto;   
+    width: 100vw;      
+    position: relative;
+    padding: 15px;
+}
+
+
+#registroForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: linear-gradient(180deg, #c7f5ef 0%, #e6fffb 100%);
+    text-align: center;
+    padding: 50px;
+    font-family: "DynaPuff", system-ui;
+    font-size: 24px;
+    border: 4px solid #1b6d6762;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #1b6d67b7;
+    height: auto;
+    width: 40%;
+    max-width: 500px;
+    min-width: 280px;
+}
+
+#registroForm h2 {
+    color: #1b6d67c2;
+    text-shadow: 0 0 12px #fafffe;
+    font-size: 2em;
+    transform: translateX(-30px);
+}
+
+
+#gatito {
+    position: absolute;
+    z-index: 2;
+    top: 8px;
+    transform: translateX(15vw); 
+    height: 160px;
+    animation: 5s rotar ease-in-out infinite; 
+}
+
+@keyframes rotar {
+    20% { transform: translateX(15vw) rotate(0deg); }
+    40% { transform: translateX(15vw) rotate(-15deg); }
+    60% { transform: translateX(15vw) rotate(15deg); }
+    100% { transform: translateX(15vw) rotate(0deg); }
+}
+
+.input-box {
+    position: relative;
+    margin: 8px 0;
+}
+
+.input-box input {
+    width: 90%;
+    height: 26px;
+    border: 4px dashed #1b6d68;
+    outline: none;
+    border-radius: 30px;
+    color: #1b6d68;
+    font-family: "DynaPuff", system-ui;
+    font-size: 0.9em;
+    background: white;
+    padding: 20px 15px;
+    opacity: 0.6;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #1b6d68;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -10px;
+    font-size: 0.75em;
+    color: #1b6d68;
+}
+
+.btn {
+    background-color: #1b6d68;
+    border-radius: 30px;
+    padding: 15px;
+    color: #ffffff;
+    font-family: "DynaPuff", system-ui;
+    font-size: 1rem;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    cursor: url('../imagenes/hand.cur'), pointer;
+    background-color: #0e4642;
+}
+
+.input-box input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #d6f7f7 inset;
+    -webkit-text-fill-color: #1b6d68;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.input-box input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #c7f5ef inset;
+    -webkit-text-fill-color: #1b6d68;
+}
+
+.extras a {
+    color: #1b6d68;
+    font-size: 0.9rem;
+    text-decoration: dotted;
+    cursor: url('../imagenes/hand.cur'), pointer;
+}
+
+.extras label {
+    margin-right: 20px;
+    font-size: 0.9rem;
+}
+
+.extras input {
+    font-size: 0.9rem;
+    height: 18px;
+    cursor: url('../imagenes/hand.cur'), pointer;
+    transition: all 0.3s ease;
+}
+
+.extras input:hover {
+    transform: scale(1.05);
+}
+
+#negro {
+    position: absolute;
+    z-index: 333;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    animation: fade_out 1s linear forwards;
+}
+
+@keyframes fade_out {
+    from {
+        opacity: 1;
+        filter: blur(8px);
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 600px) {
+    #contenedor {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    #gatito {
+        transform: translateX(8vw);
+        height: 120px;
+    }
+
+    #burbuja, #mensaje {
+        transform: translateX(40vw) translateY(0) rotate(0deg);
+        height: 25%;
+        opacity: 1;
+        animation: none;
+    }
+
+    #registroForm {
+        width: 90%;
+        padding: 25px 15px;
+        font-size: 16px;
+        gap: 10px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 12px;
+    }
+}

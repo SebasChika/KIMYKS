@@ -1,0 +1,249 @@
+* {
+  cursor: url('../imagenes/arrow.cur'), default;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #0c73e9;
+  font-family: Arial, sans-serif;
+  background-image: url('../imagenes/acerca_de.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: url('../imagenes/arrow.cur'), pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+}
+
+
+h1 {
+  font-family: "DynaPuff", system-ui;
+  font-size: 60px;
+  margin: 0;
+  display: flex;
+  background: linear-gradient(120deg, #000000, #0e0e0ea8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  top: 1%;
+  left: 75%;
+  transform: translateX(-55%);
+}
+
+.acer,
+.de {
+  color: black;
+  margin-right: 20px;
+}
+
+
+#volver {
+  width: 80px;
+  background-color: rgb(48, 77, 173);
+  font-size: 20px;
+  color: white;
+  padding: 10px 20px;
+  font-family: "DynaPuff", system-ui;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 1%;
+  left: 1%;
+}
+
+#volver:hover {
+  background-color: rgb(89, 123, 168);
+  transform: scale(1.05);
+  box-shadow: 0 0 10px white;
+  cursor: url('/imagenes/hand.cur'), pointer;
+}
+
+#volver_img {
+  height: 50px;
+  width: 50px;
+}
+
+.bubble,
+.bubble2 {
+  width: 22vw;
+  height: 20vw;
+  max-width: 300px;
+  max-height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+  border-radius: 25px;
+  background: linear-gradient(50deg, #278be6, #589cdb, #86d2f9, #abdff8);
+  text-align: center;
+  font-family: "DynaPuff", system-ui;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  overflow: hidden;
+  animation: 1.5s in ease-in-out forwards;
+}
+
+@keyframes in {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+
+  }
+
+}
+
+.bubble p,
+.bubble2 p {
+  font-size: 2em;
+  overflow-wrap: break-word;
+  margin: 0;
+  color: rgb(31, 43, 46);
+}
+
+
+
+.bubble {
+  position: absolute;
+  top: 12%;
+  left: 27%;
+}
+
+.bubble2 {
+  position: absolute;
+  top: 40%;
+  left: 1%;
+}
+
+#problema,
+#solucion {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  position: static;
+}
+
+#problema {
+  transform: translateY(10px);
+}
+
+#texto_1,
+.bubble2 p:last-of-type {
+  margin: 0;
+  text-align: justify;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+p {
+  font-size: 20px;
+}
+
+#animacion {
+  transform: translateY(30px);
+  box-shadow: 0 0 20px rgb(2, 5, 4);
+  border: 3px dashed #13423c;
+  border-radius: 20px;
+  position: absolute;
+  right: 6%;
+  top: 20%;
+  width: 35%;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+#animacion:hover {
+  transform: scale(1.02) translateY(30px);
+}
+
+#btnPrueba {
+  position: absolute;
+  right: 10%;
+  top: 64%;
+}
+
+#uno,
+#dos,
+#tres,
+#cuatro,
+#cinco,
+#seis,
+#siete,
+#ocho,
+#nueve,
+#diez,
+#once,
+#doce,
+#trece {
+  border: 3px solid rgba(31, 255, 255, 0.068);
+  font-family: "Dynapuff", system-ui;
+  font-size: 20px;
+  background-color: rgb(40, 73, 60);
+  color: rgb(226, 226, 226);
+  border-radius: 3px;
+  box-shadow: 0 0 20px rgb(152, 240, 221);
+  transition: all 0.3s ease;
+  transform: translateY(50px) translateX(35px);
+  border-radius: 10px;
+  cursor: url('/imagenes/hand.cur'), pointer;
+}
+
+#uno:hover,
+#dos:hover,
+#tres:hover,
+#cuatro:hover,
+#cinco:hover,
+#seis:hover,
+#siete:hover,
+#ocho:hover,
+#nueve:hover,
+#diez:hover,
+#once:hover,
+#doce:hover,
+#trece:hover {
+  background-color: rgb(12, 27, 21);
+  cursor: url('/imagenes/hand.cur'), pointer;
+}
+
+#negro {
+  position: absolute;
+  z-index: 333;
+  height: 222%;
+  width: 2000%;
+  background-color: black;
+  animation: fade_out 1s linear forwards;
+}
+
+@keyframes fade_out {
+  from {
+    opacity: 1;
+    filter: blur(10px);
+  }
+
+  to {
+    opacity: 0;
+    filter: blur(0px);
+    display: none;
+  }
+}

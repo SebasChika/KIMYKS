@@ -1,0 +1,200 @@
+* {
+  cursor: url('../imagenes/arrow.cur'), default;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+
+}
+
+
+body {
+  position: relative;
+  background: url('../imagenes/preguntas.png') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #aee;
+  overflow: hidden;
+}
+
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: inherit;
+  z-index: -1;
+}
+
+.contenedor {
+  display: flex;
+  justify-content:center; 
+  align-items:auto;         
+  gap: 110px;                  
+  height: 100vh;     
+  transform: translateY(-20px);         
+}
+
+.contenedor img {
+  width: 16%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+
+.flip-card {
+  background-color: transparent;
+  width: 16%;
+  perspective: 1000px;
+  transition: all 0.3s ease;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: auto;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+#sebas{
+  animation: in 1s ease-in-out forwards;
+}
+#sofia{
+  animation: in 2s ease-in-out forwards;
+
+}
+#maria{
+  animation: in 3s ease-in-out forwards;
+  
+}
+
+@keyframes in {
+  from{
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0px);
+
+  }
+  
+}
+
+
+
+.flip-card:hover .flip-inner {
+  transform: rotateX(5deg) rotateY(180deg);
+  animation: loco 3s linear forwards;
+  cursor: url('../imagenes/arrow.cur'),pointer;
+  
+}
+
+
+
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front img, .back img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.back {
+  transform: rotateY(180deg);
+
+}
+
+header{
+margin: 4%;
+}
+
+#volver{
+  z-index: 60;
+  width:80px;
+    background-color: rgb(48, 77, 173);
+    font-size: 20px;
+    color: white;
+    padding: 10px 20px;
+    font-family: "DynaPuff", system-ui;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    bottom:-5%;
+    right:-3%;
+    margin-right:4px;
+   
+    
+    
+
+}
+#volver:hover {
+    background-color: rgb(89, 123, 168);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+
+  }
+  #volver_img{
+    height: 50px;
+    width: 50px;
+  }
+
+  h1{
+    opacity: 0;
+  }
+
+  #negro {
+  position: absolute;
+  top:0%;
+  left:0%;
+  z-index: 333;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  animation: fade_out 2s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes fade_out {
+  from {
+    opacity: 1;
+    filter: blur(20px);
+  }
+  to {
+    opacity: 0;
+    display: none;
+    filter: blur(0px);
+  }
+}
+
+@media (min-width: 300px) and (max-width: 400px){
+  .contenedor {
+  display: flex;
+  justify-content:center; 
+  align-items:auto; 
+  flex-direction: column;        
+  gap: 110px;                  
+  height: 100vh;     
+  transform: translateY(-100px);         
+}
+
+#this{
+  transform: translateY(-250px) scale(1.9)translateX(180px);  
+}
+
+}

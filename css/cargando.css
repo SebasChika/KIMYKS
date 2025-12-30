@@ -1,0 +1,213 @@
+* {
+  cursor: url('../imagenes/arrow.cur'), default;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+
+}
+
+
+body {
+  position: relative;
+  background: url('../imagenes/preguntas.png') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #aee;
+  overflow: hidden;
+}
+
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: inherit;
+  z-index: -1;
+}
+
+h1 {
+  text-shadow: 3px 5px 5px rgba(0, 0, 0, 0.562);
+  color: rgb(27, 27, 27);
+  font-weight: light;
+}
+
+#gif {
+  height: 300px;
+  position: absolute;
+  top: 36%;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#texto {
+  font-size: 30px;
+  font-family: "DynaPuff", system-ui;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  text-shadow: 2px 2px 4px #3f3f3f;
+  transform: translateX(-50%);
+}
+
+#c {
+  position: absolute;
+  right: 101%;
+  background-color: rgb(42, 87, 81);
+  color: white;
+  width: 30%;
+  border: none;
+  height: 50%;
+  border-radius: 15px;
+  text-shadow: 2px 10px 0px rgb(27, 53, 49);
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+#cargando {
+  height: 300px;
+  width: 300px;
+  position: relative;
+  border-radius: 50%;
+  color: #3f3f3f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+@keyframes girando {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#cargaa_todo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-bottom: 40%;
+}
+
+#cargando::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 20px dashed rgba(17, 134, 119, 0.363);
+  text-shadow: 2px 2px 4px #3f3f3f;
+  box-shadow: 0 4px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  animation: girando 5s linear infinite;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#contador {
+  font-family: "DynaPuff", system-ui;
+  font-size: 100px;
+  color: rgb(6, 40, 41);
+  z-index: 1;
+  text-shadow: 2px 2px 4px #c2c4c5;
+}
+
+#logo {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+}
+
+#ayudante {
+  position: absolute;
+  top: 30%;
+  height: 50%;
+  right: 4%;
+  animation: si 5s ease infinite;
+}
+
+@keyframes si {
+  0% {
+    transform: translateY(0)
+  }
+
+  25% {
+    transform: translateY(-25px)
+  }
+
+  50% {
+    transform: translateY(-5px)
+  }
+
+  75% {
+    transform: translateY(-15px)
+  }
+
+  100% {
+    transform: translateY(0)
+  }
+}
+
+#manoAyudante {
+  position: absolute;
+  top: 50%;
+  left: 76%;
+  height: 45%;
+  animation: si 6s ease infinite;
+}
+
+#negro {
+  position: absolute;
+  z-index: 333;
+  height: 2222px;
+  width: 2000px;
+  background-color: black;
+  animation: fade_in 1s linear forwards;
+  animation-delay: 100s;
+  opacity: 0;
+}
+
+@keyframes fade_in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 300px) and (max-width:450px) {
+
+  body{
+    overflow:hidden;
+  }
+  #ayudante {
+    height: 30%;
+    right: -200px;
+  }
+
+  #manoAyudante {
+    height: 30%;
+    left: 90%;
+  }
+
+  #cargaa_todo {
+    transform: scale(0.8) translateY(250px) translateX(140px)
+  }
+
+  #texto {
+    transform: translateY(300px) scale(0.8);
+  }
+}

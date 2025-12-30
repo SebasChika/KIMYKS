@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="imagenes/No_fondo-_2_.ico">
+  <link rel="stylesheet" href="css/preguntas 2.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+  <title>Kimyks | Nivel 2.1</title>
+</head>
+
+<body>
+
+
+  <div id="negro"></div>
+
+
+  <div id="coso">
+    <h1 id="preguntas">
+      <span style="--i:0">P</span>
+      <span style="--i:1">R</span>
+      <span style="--i:2">E</span>
+      <span style="--i:3">G</span>
+      <span style="--i:4">U</span>
+      <span style="--i:5">N</span>
+      <span style="--i:6">T</span>
+      <span style="--i:7">A</span>
+      <span style="--i:8">S</span>
+    </h1>
+
+    <h1 id="multiples">
+      <span style="--i:0">M</span>
+      <span style="--i:1">U</span>
+      <span style="--i:2">L</span>
+      <span style="--i:3">T</span>
+      <span style="--i:4">I</span>
+      <span style="--i:5">P</span>
+      <span style="--i:6">L</span>
+      <span style="--i:7">E</span>
+      <span style="--i:8">S</span>
+    </h1>
+    <h1 id="nivel">
+      <span style="--i:0">N</span>
+      <span style="--i:1">I</span>
+      <span style="--i:2">V</span>
+      <span style="--i:3">E</span>
+      <span style="--i:4">L</span>
+      <span style="--i:5">2.1</span>
+    </h1>
+  </div>
+
+  <div id="gradiente">
+    <img id="Cl" src="imagenes/concentrese/2.png" alt="Imagen química">
+    <p id="PREGUNTA"><strong>¿Qué significa el número atómico de un elemento?</strong></p>
+  </div>
+
+  <form id="quizForm" onsubmit="return false;">
+    <button id="A" name="q1" type="button" onclick="seleccionarOpcion('A', 'a'), calcularResultados()">A.
+      Protones en el núcleo</button><br>
+    <button id="B" name="q1" type="button" onclick="seleccionarOpcion('B', 'b'), calcularResultados()">B.
+       Neutrones en el núcleo</button><br>
+    <button id="C" name="q1" type="button" onclick="seleccionarOpcion('C', 'c'), calcularResultados()">C.
+      Electronegatividad</button><br>
+    <button id="D" name="q1" type="button" onclick="seleccionarOpcion('D', 'd'), calcularResultados()">D. Peso
+      Peso atómico promedio</button><br><br>
+
+  </form>
+
+
+  <img id="titleResponsive" src="imagenes/preguntasTitle_1.png">
+
+
+
+
+
+
+
+  <p id="resultado"></p>
+
+
+  <img id="ayudante" onclick="mostrarInformacion()" src="imagenes/gato_ayudante.png">
+  <img id="mano" src="imagenes/mano_ayudante.png">
+
+  <div id="alerta" class="alarma">
+    <img id="correcto" src="imagenes/No_fondo (2).png"><br>
+    <p id="context"></p>
+    <button id="cerrarAlerta" type="button">cerrar</button>
+  </div>
+  <div id="alerta_2" class="alarma_2">
+    <img id="incorrecto" src="imagenes/No_fondo (2).png"><br>
+    <p id="contexto">Incorrecto!❌</p>
+  </div>
+  <script rel="javascript" src="js/preguntas.2.js"></script>
+</body>
+
+</html>

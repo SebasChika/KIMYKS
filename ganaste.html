@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kimyks | Felicidades</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="imagenes/No_fondo-_2_.ico">
+  <link rel="stylesheet" href="css/ganaste.css">
+</head>
+
+<body>
+
+  <div id="negro"></div>
+
+  <div id="content">
+
+  <header>
+    <h1 id="titulito">GANASTE!!</h1>
+    <div class="title_back">GANASTE!!</div>
+    <div id="nivel">FELICIDADES</div>
+  </header>
+  <div id="felicidades">Felicitaciones jugador!! <br> haz logrado completar exitosamente <br>todos los niveles de juego<br>
+    y adquirido nuevos conocimientos sobre la química.<br> Esperamos que hayas disfrutado de la experiencia
+  </div>
+    <img id="trofeo" src="imagenes/trofeo.png">
+    <a href="pantalla_principal.html">
+  <img id="ayudante" src="imagenes/gato_ayudante.png">
+  <img id="mano" src="imagenes/mano_ayudante.png">
+  </div>
+
+  <script>
+    const simbolos = ["✨", "🎉"];
+    function crearElemento() {
+      const elemento = document.createElement("div");
+      elemento.classList.add("lluvia");
+      elemento.textContent = simbolos[Math.floor(Math.random() * simbolos.length)];
+      elemento.style.left = Math.random() * window.innerWidth + "px";
+      const size = Math.random() * 30 + 15;
+      elemento.style.fontSize = size + "px";
+      const duracion = Math.random() * 3 + 2;
+      elemento.style.animationDuration = duracion + "s";
+      document.body.appendChild(elemento);
+      setTimeout(() => {
+        elemento.remove();
+      }, duracion * 1000);
+    }
+    setInterval(crearElemento, 200);
+  </script>
+</body>
+
+</html>

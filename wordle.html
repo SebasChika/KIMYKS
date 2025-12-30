@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/wordle.css">
+    <link rel="shortcut icon" href="imagenes/No_fondo-_2_.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+    <title>Nivel 5| kimyks</title>
+</head>
+
+<body>
+
+    <div id="negro"></div>
+
+    <div id="content">
+        <header>
+            <h1>WORDLE</h1>
+            <div class="title_back">WORDLE</div>
+        </header>
+        <div id="nivel">nivel 5</div>
+
+        <div id="main">
+            <div id="tablero"></div>
+            <div id="teclado"></div>
+        </div>
+        <div id="ayudante">
+            <img id="gatito" src="imagenes/gato_ayudante.png">
+            <a href="wordle.html">
+                <img id="manito" src="imagenes/mano_ayudante.png">
+            </a>
+        </div>
+
+    </div>
+
+    <div id="alerta" class="alarma">
+        <img id="correcto" src="imagenes/No_fondo (2).png"><br>
+        <p id="context"></p>
+        <button type="button" id="button" onclick="salirayud()">Salir</button>
+    </div>
+
+
+    <script src="js/wordle.js"></script>
+</body>
+
+</html>
